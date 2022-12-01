@@ -1,16 +1,14 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-hooks',
-  templateUrl: './hooks.component.html',
-  styleUrls: ['./hooks.component.css']
+  selector: 'app-hooks-assign',
+  templateUrl: './hooks-assign.component.html',
+  styleUrls: ['./hooks-assign.component.css']
 })
-export class HooksComponent implements OnInit, OnChanges {
-@Input() userId:number;
-  constructor() { 
-    console.log("Hooks component constructor called");
-    
-  }
+export class HooksAssignComponent implements OnInit {
+
+  @Input() color:string;
+  constructor() { }
   ngOnChanges(changes: SimpleChanges): void {
     // throw new Error('Method not implemented.');
     console.log("HooksComponent ngOnChanges called");
@@ -30,8 +28,6 @@ export class HooksComponent implements OnInit, OnChanges {
   }
 
   ngOnInit() {
-    console.log("Hooks component ngOnInit method called");
-    
   }
 
 }

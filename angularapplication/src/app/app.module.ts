@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HooksComponent } from './hooks/hooks.component';
+import { HooksAssignComponent } from './hooks-assign/hooks-assign.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HooksComponent
+    HooksComponent,
+    HooksAssignComponent
   ],
   imports: [
     BrowserModule,

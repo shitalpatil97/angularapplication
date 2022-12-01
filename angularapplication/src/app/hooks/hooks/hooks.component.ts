@@ -6,13 +6,15 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
   styleUrls: ['./hooks.component.css']
 })
 export class HooksComponent implements OnInit, OnChanges {
-@Input() userId:number;
-  constructor() { 
-    console.log("Hooks component constructor called");
-    
-  }
+  @Input() userid: number;
+pi;
+  constructor() {
+    this.pi = 3.14;
+    console.log("HooksComponent constructor called");
+   }
+
   ngOnChanges(changes: SimpleChanges): void {
-    // throw new Error('Method not implemented.');
+
     console.log("HooksComponent ngOnChanges called");
     for (const propname in changes) {
       const prop = changes[propname];
@@ -29,9 +31,9 @@ export class HooksComponent implements OnInit, OnChanges {
     
   }
 
+   // hooks 
   ngOnInit() {
-    console.log("Hooks component ngOnInit method called");
-    
+    console.log("HooksComponent ngOnInit called")
   }
 
 }
