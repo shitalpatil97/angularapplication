@@ -17,11 +17,11 @@ export class HooksAssignComponent implements OnInit {
 
       const {previousValue, currentValue, firstChange} = prop;
 
-      console.log(`Prop name ${propname}`);
-      console.log(`Prev  value ${previousValue}`);
-      console.log(`Current value ${currentValue}`);
-      console.log(`First change ${firstChange}`);
-      console.log("---------------")
+      console.log(`Color name : ${propname}`);
+      console.log(`Previous selected color is:  ${previousValue}`);
+      console.log(`Current selected color is: ${currentValue}`);
+      console.log(`Is it first change : ${firstChange}`);
+      console.log("**********************************************************************************")
 
     }
     

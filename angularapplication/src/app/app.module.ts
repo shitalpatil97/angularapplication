@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HooksComponent } from './hooks/hooks.component';
 import { HooksAssignComponent } from './hooks-assign/hooks-assign.component';
+import { AssignComponent } from './assign/assign.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HooksComponent,
-    HooksAssignComponent
+    HooksAssignComponent,
+    AssignComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public uid: number;
+  public colors:string;
 
   title = 'angularapplication';
 }
