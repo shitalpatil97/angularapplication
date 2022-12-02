@@ -1,15 +1,15 @@
 
 <h2>Assignment on dated 1st december</h2>
 
-<div [ngStyle]="{'background-color':color}" style="margin-left:80px ; ;">
+<!-- <div [ngStyle]="{'background-color':color}" style="margin-left:80px ; ;"> -->
 
-<button type="button" class="btn btn-danger" (click)="toggleDisplayDiv($event)">Show Details</button> 
+<button type="button" class="btn btn-danger" (click)="toggleDisplayDiv($event)" >Show Details</button> 
 <!-- <button type="button" class="btn btn-primary" (click)="toggleDisplayDiv()">Show Details</button> -->
 
 <p [hidden]="!isShow">This is my paragraph</p> 
 <!-- {{counter}} -->
 <ul *ngFor="let a of arr">
-    <li>{{arr[a]}}</li>
+    <li [ngStyle]="{'background-color':color}" [ngClass]="'blue:counter===5'">{{arr[a]}}</li>
 
 </ul>
 <!-- <div [ngStyle]="{'background-color':color}"></div> -->
