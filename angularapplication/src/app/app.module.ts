@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HooksComponent } from './hooks/hooks.component';
 import { HooksAssignComponent } from './hooks-assign/hooks-assign.component';
 import { AssignComponent } from './assign/assign.component';
+import { DirassignComponent } from './dirassign/dirassign.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HooksComponent,
     HooksAssignComponent,
-    AssignComponent
+    AssignComponent,
+    DirassignComponent
   ],
   imports: [
     BrowserModule,
