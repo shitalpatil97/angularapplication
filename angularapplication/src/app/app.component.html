@@ -59,9 +59,10 @@
   </div> -->
   <div >
     <div>
-      <input type="text" #input>
+      <input type="text" #input (blur)="handleData($event)">
+
   <button (click)="showDetails(input.value)">Add</button>
-  <app-life-cycle [uid]="userName">
+  <app-life-cycle [uid]="userName" [parentData]="data">
     <p #child>This is paragraph tag of parent component</p>
   </app-life-cycle>
     </div>
