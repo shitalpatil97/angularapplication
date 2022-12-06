@@ -1,0 +1,18 @@
+.div{
+    background-image: url(cartoon-guys-five-best-friends-student-vector-22549369.jpg);
+    background-size: cover;
+    background-color:gray;
+    
+    
+    
+
+}
+p{
+    display: block;
+}
+table,tr,td,th {
+                border: 1px solid rgb(50, 49, 50);
+                border-collapse: collapse;
+                text-align: center;
+               background-color:palegreen;
+            }

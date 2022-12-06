@@ -1,0 +1,27 @@
+<p style="margin-left:120px; color:black; font-weight:120px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Add and Remove Item Into Table</p>
+
+<div style= "background-color:aquamarine; background-image: url(many-used-modern-electronic-gadgets-use-white-floor-reuse-recycle-concept-top-view-153892434.jpg);">
+    <div style="background-color:plum; margin-left:120px ;margin-right:925px;">
+        <input type="text" placeholder="add item" [(ngModel)]="Item" #item>
+        <br><br>
+         
+         <button class="btn btn-primary" (click)="addItem(item.value)">Add Items</button>
+         <br><br>
+ 
+     
+ <table class="table table-striped" style="align-items:center  ;">
+     <thead>
+         <th>Name</th>
+         
+         <th  >Action</th>
+     </thead>
+     <tbody>
+         <tr *ngFor="let a of arr, let i=index">
+             <td style="color:brown ;">{{a.name}}</td>
+             
+             <td><button (click)="onReset(item.value)" class="btn btn-primary">Remove</button></td>
+         </tr>
+     </tbody>
+ </table>
+ </div>
+</div>

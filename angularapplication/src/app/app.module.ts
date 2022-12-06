@@ -7,6 +7,9 @@ import { HooksComponent } from './hooks/hooks.component';
 import { HooksAssignComponent } from './hooks-assign/hooks-assign.component';
 import { AssignComponent } from './assign/assign.component';
 import { DirassignComponent } from './dirassign/dirassign.component';
+import { BtnassignComponent } from './btnassign/btnassign.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +17,13 @@ import { DirassignComponent } from './dirassign/dirassign.component';
     HooksComponent,
     HooksAssignComponent,
     AssignComponent,
-    DirassignComponent
+    DirassignComponent,
+    BtnassignComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

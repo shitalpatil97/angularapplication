@@ -7,6 +7,8 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 })
 export class HooksComponent implements OnInit, OnChanges {
 @Input() userId:number;
+@Input() parentData: string;
+@Input() product: any;
   constructor() { 
     console.log("Hooks component constructor called");
     

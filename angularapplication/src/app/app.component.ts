@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './models/product';
 
 
 @Component({
@@ -11,4 +12,16 @@ export class AppComponent {
   public colors:string;
 
   title = 'angularapplication';
+  data;
+  name: string;
+  price: number;
+  product: Product = new Product();
+  handleData(value) {
+    this.data = value.target.value;
+  }
+  updateProduct() {
+    //this.product = new Product();
+    this.product.name = this.name;
+    this.product.price = this.price;
+  }
 }

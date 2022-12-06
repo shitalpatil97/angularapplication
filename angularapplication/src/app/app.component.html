@@ -25,8 +25,9 @@
     {{id}}
   </option>
   </select> -->
-  <app-dirassign></app-dirassign>
-  <h2 style="margin-left:450px ;" >Select color</h2>
+  <app-btnassign></app-btnassign>
+  <!-- <app-dirassign></app-dirassign> -->
+  <!-- <h2 style="margin-left:450px ;" >Select color</h2>
   <div style="margin-left:450px ; margin-right:1050px ; background-color:black; border: 1px;">
     <select class="custom-select" (change)="colors = item.value" #item style="background-color: blueviolet; height: 35px;">
       <option selected disabled style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;text-shadow: 5px;">No value selected</option>
@@ -34,10 +35,24 @@
         {{col}}
       </option>
       </select>
-  </div>
+  </div> -->
     
-  <app-assign></app-assign>
+  <!-- <app-assign></app-assign>
   <!-- <app-hooks [userId]="uid"></app-hooks> -->
-  <app-hooks-assign [color]="colors"></app-hooks-assign>
+  <!-- <app-hooks-assign [color]="colors">
+    
+  </app-hooks-assign>   -->
+  <div class="row" style="text-align:center;">
+    <div class="col-md-12">
+  <input type="text" placeholder="enter value" (blur)="handleData($event)">
+  
+  <p>Product Name: <input type="text" placeholder="Enter product name" [(ngModel)]="name"></p>
+  <p>Product Price: <input type="text" placeholder="Enter product price" [(ngModel)]="price"></p>
+  <button class="btn btn-primary" (click)="updateProduct()">Update product</button>
+  <app-hooks [userId]="uid" [parentData]="data" [product]="product">
+    <h1>This is heading tag of parent component</h1>
+  </app-hooks>
+  </div>
+  </div>
   
 <!-- <app-hooks [color]="colors"></app-hooks> -->
