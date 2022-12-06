@@ -25,7 +25,7 @@
     {{id}}
   </option>
   </select> -->
-  <app-btnassign></app-btnassign>
+  <!-- <app-btnassign></app-btnassign> -->
   <!-- <app-dirassign></app-dirassign> -->
   <!-- <h2 style="margin-left:450px ;" >Select color</h2>
   <div style="margin-left:450px ; margin-right:1050px ; background-color:black; border: 1px;">
@@ -42,7 +42,7 @@
   <!-- <app-hooks-assign [color]="colors">
     
   </app-hooks-assign>   -->
-  <div class="row" style="text-align:center;">
+  <!-- <div class="row" style="text-align:center;">
     <div class="col-md-12">
   <input type="text" placeholder="enter value" (blur)="handleData($event)">
   
@@ -56,6 +56,15 @@
   
   </app-hooks>
   </div>
+  </div> -->
+  <div >
+    <div>
+      <input type="text" #input>
+  <button (click)="showDetails(input.value)">Add</button>
+  <app-life-cycle [uid]="userName">
+    <p #child>This is paragraph tag of parent component</p>
+  </app-life-cycle>
+    </div>
+    
   </div>
-  
 <!-- <app-hooks [color]="colors"></app-hooks> -->

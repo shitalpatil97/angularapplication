@@ -15,6 +15,7 @@ export class AppComponent {
   data:string='Red';
   name: string;
   price: number;
+  userName:string;
   product: Product = new Product();
   handleData(value) {
     this.data = value.target.value;
@@ -24,4 +25,10 @@ export class AppComponent {
     this.product.name = this.name;
     this.product.price = this.price;
   }
+  showDetails(value){
+    this.userName=value;
+    
+  }
+  
+
 }

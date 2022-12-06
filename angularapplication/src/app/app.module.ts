@@ -9,6 +9,7 @@ import { AssignComponent } from './assign/assign.component';
 import { DirassignComponent } from './dirassign/dirassign.component';
 import { BtnassignComponent } from './btnassign/btnassign.component';
 import { FormsModule } from '@angular/forms';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     HooksAssignComponent,
     AssignComponent,
     DirassignComponent,
-    BtnassignComponent
+    BtnassignComponent,
+    LifeCycleComponent
   ],
   imports: [
     BrowserModule,
