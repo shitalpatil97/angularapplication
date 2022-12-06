@@ -50,7 +50,10 @@
   <p>Product Price: <input type="text" placeholder="Enter product price" [(ngModel)]="price"></p>
   <button class="btn btn-primary" (click)="updateProduct()">Update product</button>
   <app-hooks [userId]="uid" [parentData]="data" [product]="product">
-    <h1>This is heading tag of parent component</h1>
+    <h1 #child>This is child content coming from parent component</h1> 
+  
+
+  
   </app-hooks>
   </div>
   </div>

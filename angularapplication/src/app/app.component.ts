@@ -12,7 +12,7 @@ export class AppComponent {
   public colors:string;
 
   title = 'angularapplication';
-  data;
+  data:string='Red';
   name: string;
   price: number;
   product: Product = new Product();
