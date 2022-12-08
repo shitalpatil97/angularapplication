@@ -1,0 +1,93 @@
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5" style="background-color:beige ;">
+            <div class="bg-img">
+                <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+                    <fieldset>
+                        <legend class="form-group" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ; text-shadow: 3px 3px 8px grey ; color:red ;"><marquee behavior="" direction="text-left">Student Registration Form</marquee></legend>
+                    <div class="form-group">
+                        <label for="username">Name</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter name of student" required ngModel style="text-transform:capitalize ;" #name="ngModel" maxlength="30" minlength="6">
+                        <span style="color: red;" *ngIf="name.invalid">Enter valid name and minimum length should be 6 character </span>
+
+                    </div>
+                    <div class="form-group">
+                      <label for="date">DOB</label>
+                      <input type="date" class="form-control"  required  >
+                      
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Sex</label>&nbsp;&nbsp;
+                        <input type="radio" name="male" > Male
+                        <input type="radio" name="male" > Female
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" email placeholder="abc@gmail.com"  required ngModel #email="ngModel">
+                        <span *ngIf="email.invalid" style="color: red;">Enter Valid Email</span>
+                      </div>
+                      <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="address" class="form-control" id="address" name="address"  placeholder="Enter your permanent address"  required ngModel>
+                      </div>
+                    
+    
+                    <div class="form-group">
+                        <label for="course">School</label>
+                        <select class="form-control dropdown" id="education" name="education"  required ngModel>
+                            <option value="" selected="selected" disabled="disabled">-- select one --</option>
+                            <option value="No formal education">10 <sup>th</sup></option>
+                            <option value="Primary education">12 <sup>th</sup></option>
+                            <option value="Secondary education">Diploma</option>
+                            <option value="GED">GED</option>
+                            <option value="Vocational qualification">Degree</option>
+                            <option value="Bachelor's degree">Masters</option>
+                            <option value="Doctorate or higher">Doctorate or higher</option>
+                          </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="course">Department</label>
+                        <select class="form-control dropdown" id="dept" name="dept"  required ngModel>
+                            <option value="" selected="selected" disabled="disabled">-- select one --</option>
+                            <option value="No formal education">Finance</option>
+                            <option value="Primary education">HR</option>
+                            <option value="Secondary education">Engineering</option>
+                            <option value="GED">Data scientist</option>
+                            
+                          </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="course">Course</label>
+                        <select class="form-control dropdown" id="dept" name="dept"  required ngModel>
+                            <option value="" selected="selected" disabled="disabled">-- select one --</option>
+                            <option value="No formal education">Computer science</option>
+                            <option value="Primary education">MECH</option>
+                            <option value="Secondary education">Civil</option>
+                            <option value="GED">Electronics & Telecommunication</option>
+                            <option value="Vocational qualification">History </option>
+                            
+                          </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="text" maxlength="10"class="form-control" id="mobile" name="mobile" required ngModel placeholder="mobile number should be of 10 digit">
+
+
+                    </div>
+                    <br>
+                    <input type="submit" class="btn btn-primary" [disabled]="!myForm.valid">&nbsp;&nbsp;&nbsp;
+                    <input type="reset" class="btn btn-danger">
+    
+                </fieldset>
+                   
+                  </form>
+
+            </div>
+           
+              
+        </div>
+    </div>
+</div>
+
+

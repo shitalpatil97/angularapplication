@@ -17,6 +17,12 @@ export class AppComponent {
   price: number;
   userName:string;
   product: Product = new Product();
+  appChildExist: boolean = true;
+
+ destroy() {
+  this.appChildExist = false;
+ }
+
   handleData(value) {
     this.data = value.target.value;
   }

@@ -1,4 +1,6 @@
-export class Product{
+ export class Product{
     name:string;
-    price:number;
-}
+   price:number;
+ }
+
+

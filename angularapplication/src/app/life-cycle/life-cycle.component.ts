@@ -15,10 +15,14 @@ export class LifeCycleComponent implements OnInit, OnChanges,DoCheck,AfterConten
     console.log("Constructor called");
    }
   ngAfterViewChecked(): void {
+    console.log("ngAfterViewCheched Checked called");
+
     this.viewChild.nativeElement.setAttribute('style',  `color:${this.parentData}`);
   }
   ngAfterViewInit(): void {
-    //this.viewChild.nativeElement.setAttribute('style','background-color:grey','color:red');
+    console.log("ngAfterViewInit Checked called");
+
+    this.viewChild.nativeElement.setAttribute('style','background-color:grey','color:red');
   }
   ngAfterContentChecked(): void {
     console.log("ngAfterContent Checked called");

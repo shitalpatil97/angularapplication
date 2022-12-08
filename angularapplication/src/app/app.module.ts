@@ -10,6 +10,8 @@ import { DirassignComponent } from './dirassign/dirassign.component';
 import { BtnassignComponent } from './btnassign/btnassign.component';
 import { FormsModule } from '@angular/forms';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { SimpleformComponent } from './simpleform/simpleform.component';
+import { StudRegComponent } from './stud-reg/stud-reg.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
     AssignComponent,
     DirassignComponent,
     BtnassignComponent,
-    LifeCycleComponent
+    LifeCycleComponent,
+    SimpleformComponent,
+    StudRegComponent
   ],
   imports: [
     BrowserModule,

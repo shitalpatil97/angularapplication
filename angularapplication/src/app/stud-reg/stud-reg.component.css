@@ -1,0 +1,10 @@
+.container{
+    background-color: blueviolet;
+    background-image:url(images.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+label{
+    color: brown;
+}
