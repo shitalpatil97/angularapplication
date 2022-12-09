@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
 import { StudRegComponent } from './stud-reg/stud-reg.component';
+import { FormgroupComponent } from './formgroup/formgroup.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { StudRegComponent } from './stud-reg/stud-reg.component';
     BtnassignComponent,
     LifeCycleComponent,
     SimpleformComponent,
-    StudRegComponent
+    StudRegComponent,
+    FormgroupComponent
   ],
   imports: [
     BrowserModule,

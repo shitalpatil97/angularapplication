@@ -1,0 +1,169 @@
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-5 text-left rounded shadow py-5" style="background-color:transparent ; border: 1px solid black; border-radius: 2px; margin-right: 80px;">
+            <div class="bg-img">
+                <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+                    <fieldset>
+                        <legend class="form-group" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ; text-shadow: 3px 3px 8px grey ; color:red ;"><marquee behavior="" direction="text-left">Student Registration Form</marquee></legend>
+                    <div ngModelGroup="userDetails" #userDetails="ngModelGroup">
+                        <div class="form-group">
+                            <label for="username"> Enter First Name</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Enter first name" required [(ngModel)]="username" #fname="ngModel" style="text-transform:capitalize ;">
+                            <small class="text-danger" *ngIf="fname.invalid && fname.touched"><i>Enter valid first name</i></small>
+    
+                        </div>
+                        <div class="form-group">
+                            <label for="midname"> Enter Middle Name</label>
+                            <input type="text" class="form-control" id="midName" name="midName" placeholder="Enter middle name" required ngModel style="text-transform:capitalize ;" #midName="ngModel">
+                            <small style="color: red;" *ngIf="midName.invalid && midName.touched"><i>Enter valid middle name</i></small>
+                            
+    
+                        </div>
+                        <div class="form-group">
+                            <label for="lname"> Enter Last Name</label>
+                            <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter last name" required ngModel style="text-transform:capitalize ;" #lname="ngModel">
+                            <small style="color: red;" *ngIf="lname.invalid && lname.touched"><i>Enter valid last name</i> </small>
+                            
+    
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="date">DOB</label>
+                      <input type="date" class="form-control"  required  >
+                      
+                    </div>
+                    <div class="form-group">
+                        <label for="sex">Sex</label>&nbsp;&nbsp;
+                        <br>
+                        <input type="radio" name="male" value="male" > Male
+                        <input type="radio" name="male" value="female" > Female
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" email placeholder="abc@gmail.com"  required ngModel #email="ngModel">
+                        <span *ngIf="email.invalid && email.touched" style="color: red;">Enter Valid Email</span>
+                    </div>
+                    <div ngModelGroup="addressDetails" #addressDetails="ngModelGroup">
+                        <div class="form-group">
+                            <label for="tAddress">Temporary Address</label>
+                            <input type="tAddress" class="form-control" id="tAddress" name="tAddress"  placeholder="Enter your Temporary address"  required ngModel>
+                          </div>
+                      
+                      <div class="form-group">
+                        <label for="pAddress">Permanent Address</label>
+                        <input type="pAddress" class="form-control" id="pAddress" name="pAddress"  placeholder="Enter your permanent address"  required ngModel>
+                      </div>
+                      <div class="form-group">
+                        <label for="city">City</label>
+                        <select name="city" id="city" ngModel required class="form-control dropdown">
+                            <option value="" selected="selected" disabled="disabled">Select City</option>
+                            <option value="pune">Pune</option>
+                            <option value="">Mumbai</option>
+                            <option value="">Nashik</option>
+                            <option value="">Nagpur</option>
+                            <option value="">Sangli</option>
+
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="state">State</label>
+                        <select name="state" id="state" ngModel required class="form-control dropdown">
+                            <option value="" selected="selected" disabled="disabled">Select State</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="MP">MP</option>
+                            <option value="Gujrat">Gujrat</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Goa">Goa</option>
+
+                        </select>
+                      </div>
+                  </div>
+                  
+                    
+    
+                    <div ngModelGroup="colDetails" #colDetails="ngModelGroup">
+                        <div class="form-group">
+                            <label for="col">Collage</label>
+                            <select class="form-control dropdown" id="education" name="education"  required ngModel>
+                                <option value="" selected="selected" disabled="disabled">-- select one --</option>
+                                <option value="JSPM Pune">JSPM Pune <sup>th</sup></option>
+                                <option value="SKN">SKN <sup>th</sup></option>
+                                <option value="Fabtech">Fabtech</option>
+                                <option value="KBP">KBP</option>
+                                <option value="DY Patil">DY Patil</option>
+                                <option value="CEOP">CEOP</option>
+                                <option value="Svery">Svery</option>
+                              </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dept">Department</label>
+                            <select class="form-control dropdown" id="dept" name="dept"  required ngModel>
+                                <option value="" selected="selected" disabled="disabled">-- select Department --</option>
+                                <option value="Finance">Finance</option>
+                                <option value="HR">HR</option>
+                                <option value="Engineering">Engineering</option>
+                                <option value="Data scientist">Data scientist</option>
+                                
+                              </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Course</label>
+                            <select class="form-control dropdown" id="dept" name="dept"  required ngModel>
+                                <option value="" selected="selected" disabled="disabled">-- select one --</option>
+                                <option value="Computer science">Computer science</option>
+                                <option value="MECH">MECH</option>
+                                <option value="Civil">Civil</option>
+                                <option value="Electronics & Telecommunication">Electronics & Telecommunication</option>
+                                <option value="History">History </option>
+                                
+                              </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="text" maxlength="10"class="form-control" id="mobile" name="mobile" required ngModel placeholder="mobile number should be of 10 digit" #mobile="ngModel">
+                        <span *ngIf="mobile.invalid && mobile.touched" style="color: red;">Enter valid mobile number</span>
+
+
+                    </div>
+                    <br>
+                    <input type="submit" class="btn btn-primary">&nbsp;&nbsp;&nbsp; 
+                    <input type="reset" class="btn btn-danger">
+                    
+
+                    
+    
+                </fieldset>
+
+                
+                   
+                  </form>
+                  
+             </div>
+
+            </div>
+            <div class="col-md-5 rounded shadow py-4" *ngIf="studDetails" style="border:1px solid black;">
+                <h2>Form data</h2>
+                <p>First Name: <strong>{{stud.fname}}</strong></p>
+                <p>Middle Name: <strong>{{stud.mname}}</strong></p>
+                <p>Last Name: <strong>{{stud.lname}}</strong></p>
+                <p>Permanent Address: <strong>{{stud.pAdd}}</strong></p>
+                <p>Temporary Address: <strong>{{stud.tempAdd}}</strong></p>
+                <p>City: <strong>{{stud.city}}</strong></p>
+                <p>State: <strong>{{stud.state}}</strong></p>
+                <p>College: <strong>{{stud.college}}</strong></p>
+                <p>Department : <strong>{{stud.dept}}</strong></p>
+                <p>Course: <strong>{{stud.course}}</strong></p>
+                <p>Mobile No: <strong>{{stud.mobile}}</strong></p>
+
+            </div>   
+              
+        </div>
+        
+        
+    </div>
+    
+
+
+

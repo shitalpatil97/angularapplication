@@ -3,21 +3,26 @@
     <div class="row justify-content-center">
         <div class="col-md-6 text-left rounded shadow py-5">
             <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
-                <div class="form-group">
-                    <label for="username">User Name</label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter user name" ngModel required>
-                  </div>
-
-                <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input type="email" class="form-control" id="email" email  name="email" placeholder="Enter email" ngModel required>
-                  
+                <div ngModelGroup="userDetails" #userDetails="ngModelGroup">
+                    <div class="form-group">
+                        <label for="username">User Name</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter user name" [(ngModel)]="username" required>
+                        <small *ngIf="username"> Username is: {{username}}</small>
+                      </div>
+    
+                    <div class="form-group">
+                      <label for="email">Email address</label>
+                      <input type="email" class="form-control" id="email" email  name="email" placeholder="Enter email" ngModel required #email="ngModel">
+                      <small class="text-danger" *ngIf="email.invalid && email.touched">Enter valid email</small>
+                      
+                    </div>
+                    <small class="text-danger" *ngIf="userDetails.invalid && userDetails.touched">please enter valid details</small>
                 </div>
                 
 
                 <div class="form-group">
                     <label for="course">Select Course</label>
-                    <select class="form-control" name="course" id="course" ngModel>
+                    <select class="form-control" name="course" id="course" [ngModel]="defaultValue">
                         <option value="Angular">Angular</option>
                         <option value="HTML">HTML</option>
                         <option value="JavaScript">JavaScript</option>
@@ -25,6 +30,14 @@
                 </div>
                
                 <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Submit</button>
+                <div class="row justify-content-center mt-2" *ngIf="submitted">
+                    <div class="col-md-6 rounded shadow py-4">
+                        <h2>Form data</h2>
+                        <p>Username: <strong>{{employee.username}}</strong></p>
+                        <p>Email: <strong>{{employee.email}}</strong></p>
+                        <p>Course: <strong>{{employee.course}}</strong></p>
+                    </div>
+             </div>
               </form>
         </div>
     </div>
