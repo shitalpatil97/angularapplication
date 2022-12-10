@@ -13,6 +13,7 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
 import { StudRegComponent } from './stud-reg/stud-reg.component';
 import { FormgroupComponent } from './formgroup/formgroup.component';
+import { FormcontrolexpComponent } from './formcontrolexp/formcontrolexp.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { FormgroupComponent } from './formgroup/formgroup.component';
     LifeCycleComponent,
     SimpleformComponent,
     StudRegComponent,
-    FormgroupComponent
+    FormgroupComponent,
+    FormcontrolexpComponent
   ],
   imports: [
     BrowserModule,

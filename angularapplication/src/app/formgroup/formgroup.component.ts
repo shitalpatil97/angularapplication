@@ -11,6 +11,7 @@ export class FormgroupComponent implements OnInit {
 
   stud=new Student();
   studDetails:boolean=false;
+  currentDate:any=new Date();
 
   constructor() { }
   OnSubmit(form:NgForm){
@@ -28,6 +29,9 @@ export class FormgroupComponent implements OnInit {
     this.stud.course=form.value.colDetails.dept;
     this.stud.mobile=form.value.mobile;
     this.stud.gender=form.value.male;
+    this.stud.date=form.value.date;
+    console.log(form.value.male);
+    
 
     
 

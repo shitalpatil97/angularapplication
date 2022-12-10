@@ -10,9 +10,11 @@ import { Employee } from '../models/employee';
 export class SimpleformComponent implements OnInit {
 
   defaultValue:string='Angular';
+  defaultGender:string='Male';
   employee = new Employee();
   submitted: boolean = false;
   e:string;
+  genders=[{id:1, value:'Male'}, {id:2, value:'Female'}];
 
   constructor() { }
 
@@ -28,6 +30,10 @@ export class SimpleformComponent implements OnInit {
     this.employee.username=form.value.userDetails.username;
     this.employee.email=form.value.userDetails.email;
     this.employee.course=form.value.course;
+    this.employee.gender=form.value.gender;
+    form.reset();
+    form.controls['course'].setValue('Angular');
+    form.controls['gender'].setValue('Female');
 
 
     

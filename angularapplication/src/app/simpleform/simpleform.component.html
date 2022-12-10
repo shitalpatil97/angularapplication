@@ -12,11 +12,16 @@
     
                     <div class="form-group">
                       <label for="email">Email address</label>
-                      <input type="email" class="form-control" id="email" email  name="email" placeholder="Enter email" ngModel required #email="ngModel">
+                      <input type="email" class="form-control" id="email"  name="email" placeholder="Enter email" ngModel required #email="ngModel" pattern=".+@codemind\.com">
                       <small class="text-danger" *ngIf="email.invalid && email.touched">Enter valid email</small>
                       
                     </div>
                     <small class="text-danger" *ngIf="userDetails.invalid && userDetails.touched">please enter valid details</small>
+                </div>
+                <div class="form-group">
+                    <label for="date">Select Date</label>
+                    <input type="date" name="date" min="2022-12-10" required ngModel>
+
                 </div>
                 
 
@@ -28,6 +33,11 @@
                         <option value="JavaScript">JavaScript</option>
                     </select>
                 </div>
+                <div class="form-group" *ngFor="let gender of genders">
+                    <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}" [ngModel]="defaultGender" class="custom-control-input">
+                    <label for="{{gender.id}}">{{gender.value}}</label>
+
+                </div>
                
                 <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Submit</button>
                 <div class="row justify-content-center mt-2" *ngIf="submitted">
@@ -36,6 +46,7 @@
                         <p>Username: <strong>{{employee.username}}</strong></p>
                         <p>Email: <strong>{{employee.email}}</strong></p>
                         <p>Course: <strong>{{employee.course}}</strong></p>
+                        <p>Gender: <strong>{{employee.gender}}</strong></p>
                     </div>
              </div>
               </form>

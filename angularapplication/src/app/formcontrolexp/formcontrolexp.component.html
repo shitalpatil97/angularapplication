@@ -1,0 +1,51 @@
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-5 text-left rounded shadow py-5" style="background-color:transparent ; border: 1px solid black; border-radius: 2px; margin-right: 80px;">
+            <div class="bg-img">
+                <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+                    <fieldset>
+                        <legend class="form-group" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ; text-shadow: 3px 3px 8px grey ; color:red ;"><marquee behavior="" direction="text-left">Job Registration Form</marquee></legend>
+                        <div class="form-group">
+                            <label for="name">Enter Full Name</label>
+                            <input type="text" name="" id="" class="form-control input-sm">
+                            <input type="text" name="" id="" class="form-control input-sm">
+
+
+                        </div>
+                        
+                </fieldset>
+
+                
+                   
+                  </form>
+                  
+             </div>
+
+            </div>
+            <div class="col-md-5 rounded shadow py-4" *ngIf="studDetails" style="border:1px solid black;">
+                <h2><marquee behavior="" direction="left">Student Personal Details</marquee></h2>
+                <p>First Name: <strong>{{stud.fname}}</strong></p>
+                <p>Middle Name: <strong>{{stud.mname}}</strong></p>
+                <p>Last Name: <strong>{{stud.lname}}</strong></p>
+                <p>DOB: <strong>{{stud.date}}</strong></p>
+                <p>Permanent Address: <strong>{{stud.pAdd}}</strong></p>
+                <p>Temporary Address: <strong>{{stud.tempAdd}}</strong></p>
+                <p>City: <strong>{{stud.city}}</strong></p>
+                <p>State: <strong>{{stud.state}}</strong></p>
+                <p>College: <strong>{{stud.college}}</strong></p>
+                <p>Department : <strong>{{stud.dept}}</strong></p>
+                <p>Course: <strong>{{stud.course}}</strong></p>
+                <p>Gender: <strong>{{stud.gender}}</strong></p>
+
+
+            </div>   
+              
+        </div>
+        
+        
+    </div>
+    
+
+
+
