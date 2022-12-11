@@ -26,6 +26,7 @@ export class SimpleformComponent implements OnInit {
   OnSubmit(form:NgForm)
 
   {  
+
     this.submitted=true;
    
 
@@ -36,7 +37,7 @@ export class SimpleformComponent implements OnInit {
     this.employee.course=form.value.course;
     this.employee.gender=form.value.gender;
     this.arr.push(this.employee);
-    // form.reset();
+    form.reset();
     // form.controls['course'].setValue('Angular');
     // form.controls['gender'].setValue('Female');
 
