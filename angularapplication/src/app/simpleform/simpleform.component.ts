@@ -15,10 +15,10 @@ export class SimpleformComponent implements OnInit {
   submitted: boolean = false;
   e:string;
   genders=[{id:1, value:'Male'}, {id:2, value:'Female'}];
-  arr:any;
+  arr:any[]=[];
 
   constructor() {
-    this.arr=[];
+    
    }
 
   ngOnInit() {
