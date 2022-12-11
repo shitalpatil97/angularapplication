@@ -15,8 +15,11 @@ export class SimpleformComponent implements OnInit {
   submitted: boolean = false;
   e:string;
   genders=[{id:1, value:'Male'}, {id:2, value:'Female'}];
+  arr:any;
 
-  constructor() { }
+  constructor() {
+    this.arr=[];
+   }
 
   ngOnInit() {
   }
@@ -24,6 +27,7 @@ export class SimpleformComponent implements OnInit {
 
   {  
     this.submitted=true;
+   
 
     console.log(form);
 
@@ -31,9 +35,10 @@ export class SimpleformComponent implements OnInit {
     this.employee.email=form.value.userDetails.email;
     this.employee.course=form.value.course;
     this.employee.gender=form.value.gender;
-    form.reset();
-    form.controls['course'].setValue('Angular');
-    form.controls['gender'].setValue('Female');
+    this.arr.push(this.employee);
+    // form.reset();
+    // form.controls['course'].setValue('Angular');
+    // form.controls['gender'].setValue('Female');
 
 
     

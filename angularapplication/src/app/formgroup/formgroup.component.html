@@ -143,7 +143,7 @@
              </div>
 
             </div>
-            <div class="col-md-5 rounded shadow py-4" *ngIf="studDetails" style="border:1px solid black;">
+            <!-- <div class="col-md-5 rounded shadow py-4" *ngIf="studDetails" style="border:1px solid black;">
                 <h2><marquee behavior="" direction="left">Student Personal Details</marquee></h2>
                 <p>First Name: <strong>{{stud.fname}}</strong></p>
                 <p>Middle Name: <strong>{{stud.mname}}</strong></p>
@@ -159,7 +159,32 @@
                 <p>Gender: <strong>{{stud.gender}}</strong></p>
 
 
-            </div>   
+            </div>    -->
+            <div *ngIf="studDetails">
+                <table class="table  table-bordered">
+                    <thead >
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Address</th>
+                            <th>Gender</th>
+                            <th>Date of Birth</th>
+                            <th>Email </th>
+                            <th>Department</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let a of arr ; let i=index;">
+                            
+                            <td>{{s.fname}}</td>
+                            <td>{{s.mname}}</td>
+                            <td>{{s.lname}}</td>
+                            <td>{{s.date}}</td>
+                            <td>{{s.state}}</td>
+                            <td>{{s.dept}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
               
         </div>
         

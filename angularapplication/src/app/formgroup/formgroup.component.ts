@@ -12,6 +12,7 @@ export class FormgroupComponent implements OnInit {
   stud=new Student();
   studDetails:boolean=false;
   currentDate:any=new Date();
+  arr:any[]=[];
 
   constructor() { }
   OnSubmit(form:NgForm){
@@ -31,7 +32,7 @@ export class FormgroupComponent implements OnInit {
     this.stud.gender=form.value.male;
     this.stud.date=form.value.date;
     console.log(form.value.male);
-    
+    this.arr.push(this.stud);
 
     
 

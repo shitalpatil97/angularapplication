@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-formcontrolexp',
@@ -8,6 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class FormcontrolexpComponent implements OnInit {
 
   constructor() { }
+  OnSubmit(form:NgForm){
+    console.log(form);
+    form.reset();
+    
+  }
 
   ngOnInit() {
   }

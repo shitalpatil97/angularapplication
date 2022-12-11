@@ -40,7 +40,8 @@
                 </div>
                
                 <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Submit</button>
-                <div class="row justify-content-center mt-2" *ngIf="submitted">
+                <input type="reset">
+                <!-- <div class="row justify-content-center mt-2" *ngIf="submitted">
                     <div class="col-md-6 rounded shadow py-4">
                         <h2>Form data</h2>
                         <p>Username: <strong>{{employee.username}}</strong></p>
@@ -48,7 +49,30 @@
                         <p>Course: <strong>{{employee.course}}</strong></p>
                         <p>Gender: <strong>{{employee.gender}}</strong></p>
                     </div>
-             </div>
+             </div> -->
+             <div *ngIf="submitted">
+                <table class="table  table-bordered">
+                    <thead >
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Address</th>
+                            <th>Gender</th>
+                            <th>Date of Birth</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let s of arr ; let i=index;">
+                            
+                            <td>{{s.username}}</td>
+                            <td>{{s.email}}</td>
+                            <td>{{s.course}}</td>
+                            <td>{{s.gender}}</td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
               </form>
         </div>
     </div>

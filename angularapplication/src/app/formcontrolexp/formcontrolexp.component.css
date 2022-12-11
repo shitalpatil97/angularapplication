@@ -1,0 +1,12 @@
+.container{
+    background-image: url(download1.png);
+    background-size: cover;
+}
+input,select{
+    background-color: blanchedalmond;
+    
+}
+label{
+    font-weight: bolder;
+    text-shadow: 5px 5px 5px grey;
+}
