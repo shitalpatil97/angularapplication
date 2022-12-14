@@ -32,7 +32,6 @@ export class FormgroupComponent implements OnInit {
     this.stud.gender=form.value.male;
     this.stud.date=form.value.date;
     console.log(form.value.male);
-    this.arr.push(this.stud);
 
     
 

@@ -8,12 +8,16 @@ import { HooksAssignComponent } from './hooks-assign/hooks-assign.component';
 import { AssignComponent } from './assign/assign.component';
 import { DirassignComponent } from './dirassign/dirassign.component';
 import { BtnassignComponent } from './btnassign/btnassign.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
 import { StudRegComponent } from './stud-reg/stud-reg.component';
 import { FormgroupComponent } from './formgroup/formgroup.component';
 import { FormcontrolexpComponent } from './formcontrolexp/formcontrolexp.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { ReactstudformComponent } from './reactstudform/reactstudform.component';
+import { RectformComponent } from './rectform/rectform.component';
+import { TempformComponent } from './tempform/tempform.component';
 
 
 @NgModule({
@@ -28,12 +32,17 @@ import { FormcontrolexpComponent } from './formcontrolexp/formcontrolexp.compone
     SimpleformComponent,
     StudRegComponent,
     FormgroupComponent,
-    FormcontrolexpComponent
+    FormcontrolexpComponent,
+    ReactiveformComponent,
+    ReactstudformComponent,
+    RectformComponent,
+    TempformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

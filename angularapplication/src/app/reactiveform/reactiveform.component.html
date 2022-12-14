@@ -1,0 +1,50 @@
+<div class="container"> 
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="">Enter Name</label>
+                    <input type="text" formControlName="username" class="form-control">
+                    <small class="text-danger" *ngIf="myReactiveForm.get('username').errors && myReactiveForm.get('username').touched">
+                        <span *ngIf="myReactiveForm.get('username').errors['required']">Please enter  username</span>
+                        <span *ngIf="myReactiveForm.get('username').errors['namesNotAllowed']"> {{myReactiveForm.get('username').value }} is not allowed</span>
+
+                </small>
+                     
+                </div>
+                <div class="form-group">
+                    <label for="">Enter Email</label>
+                    <input type="text" formControlName="email" class="form-control" placeholder="">
+                    <small class="text-danger" *ngIf="myReactiveForm.get('email').invalid && myReactiveForm.get('email').touched">Enter valid email</small>
+                </div>
+                <div class="form-group">
+                    <label for="course">Select Course</label>
+                    <select class="form-control" name="course" id="course" formControlName="course">
+                        <option value="Angular">Angular</option>
+                        <option value="HTML">HTML</option>
+                        <option value="JavaScript">JavaScript</option>
+                    </select>
+                </div>
+                <div class="form-group" *ngFor="let gender of genders">
+                    <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}"  class="custom-control-input" formControlName="gender">
+                    <label for="{{gender.id}}">{{gender.value}}</label>
+
+                </div>
+      
+                <button btn btn-primary >Submit</button>
+
+            </form>
+            <div class="col-md-6 rounded shadow py-4" *ngIf="submitted">
+                <h2>Form data</h2>
+                <p>Username: <strong>{{formData.name}}</strong></p>
+            </div>
+
+
+        </div>
+        
+
+
+  </div>
+
+
+</div>

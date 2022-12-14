@@ -1,0 +1,84 @@
+<div class="container">
+    <div class="row justify-content-centre" style="border-radius: 2px;">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <form form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
+                <div formGroupName="userDetails">
+                    <div class="form-group">
+                        <label for="">Enter Name</label>
+                        <input type="text" formControlName="name" placeholder="Enter name" class="form-control">
+
+    
+                    </div>
+                    <div class="form-group">
+                        <label for="">Enter Email</label>
+                        <input type="email" formControlName="email" placeholder="Enter email id" class="form-control">
+    
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password </label>
+                        <input type="password" formControlName="email" placeholder="Enter password" class="form-control">
+    
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Geneder </label> &nbsp;&nbsp;
+                        <input type="radio" value="male"  name="gender" formControlName="gender"> Male
+                        <input type="radio" value="female"  name="gender" formControlName="gender"> Female
+    
+                    </div>
+                </div>
+                <div formGroupName="address">
+                    <div class="form-group">
+                        <label for="">Permanent Address</label>
+                        <input type="text" formControlName="add" placeholder="Enter address" class="form-control">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="">Landmark</label>
+                        <input type="text" formControlName="landmark" placeholder="Enter landmark" class="form-control">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="">City</label>
+                        <select name=""  formControlName="city" class="form-control">
+                            <option value="Sangola">Sangola</option>
+                            <option value="Jath">Jath</option>
+                            <option value="Sangli">Sangli</option>
+
+                        </select>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="">State</label>
+                        <select name="" formControlName="state" class="form-control">
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Kerala">Kerala</option>
+
+                        </select>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="">Pin Code</label>
+                        <input type="text" width="30px" class="form-control" formControlName="pin">
+
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="">Mobile No</label>
+                    <input type="number" class="form-control" formControlName="mobile">
+                    <span class="text-danger" *ngIf="myReactiveForm.get('mobile').invalid && myReactiveForm.get('mobile').touched">mobile number required</span>
+
+                </div>
+                <button class="btn btn-primary">Submit</button>
+                
+                
+
+            </form>
+
+        <!-- </div class="col-md-6 rounded shadow py-4" *ngIf="submitted">
+        <div > -->
+
+        </div>
+    </div>
+</div>
