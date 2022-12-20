@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from './models/product';
+import { DemoService } from './services/demo.service';
 
 
 @Component({
@@ -7,7 +8,7 @@ import { Product } from './models/product';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   public uid: number;
   public colors:string;
 
@@ -18,6 +19,20 @@ export class AppComponent {
   userName:string;
   product: Product = new Product();
   appChildExist: boolean = true;
+  array=[];
+  constructor(private _demoService: DemoService){
+    
+  }
+  ngOnInit(): void {
+    this._demoService.getUsersData().subscribe(data => {
+      console.log('getting data from api', data)
+      this.array.push(data);
+      // console.log(this.array);
+      
+    })
+  }
+
+
 
  destroy() {
   this.appChildExist = false;

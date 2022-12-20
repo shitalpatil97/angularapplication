@@ -1,21 +1,31 @@
-<div class="container"> 
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6 text-left rounded shadow py-5">
             <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
-                <div class="form-group">
-                    <label for="">Enter Name</label>
-                    <input type="text" formControlName="username" class="form-control">
-                    <small class="text-danger" *ngIf="myReactiveForm.get('username').errors && myReactiveForm.get('username').touched">
-                        <span *ngIf="myReactiveForm.get('username').errors['required']">Please enter  username</span>
-                        <span *ngIf="myReactiveForm.get('username').errors['namesNotAllowed']"> {{myReactiveForm.get('username').value }} is not allowed</span>
+                <div formGroupName="userDetails">
+                    <div class="form-group">
+                        <label for="">Enter Name</label>
+                        <input type="text" formControlName="username" class="form-control">
+                        <small class="text-danger"
+                            *ngIf="myReactiveForm.get('userDetails.username').errors && myReactiveForm.get('userDetails.username').touched">
+                            <span *ngIf="myReactiveForm.get('userDetails.username').errors['required']">Please enter
+                                username</span>
+                            <span *ngIf="myReactiveForm.get('userDetails.username').errors['namesNotAllowed']">is not allowed</span>
 
-                </small>
-                     
-                </div>
-                <div class="form-group">
-                    <label for="">Enter Email</label>
-                    <input type="text" formControlName="email" class="form-control" placeholder="">
-                    <small class="text-danger" *ngIf="myReactiveForm.get('email').invalid && myReactiveForm.get('email').touched">Enter valid email</small>
+                        </small>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="">Enter Email</label>
+                        <input type="text" formControlName="email" class="form-control" placeholder="">
+                        <small class="text-danger"
+                            *ngIf="myReactiveForm.get('userDetails.email').errors && myReactiveForm.get('userDetails.username').touched">
+                            <span *ngIf="myReactiveForm.get('userDetails.email').errors['required']">Please enter
+                                username</span>
+                            <span *ngIf="myReactiveForm.get('userDetails.email').errors['namesNotAllowed']"> </span>
+
+                        </small>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="course">Select Course</label>
@@ -26,25 +36,44 @@
                     </select>
                 </div>
                 <div class="form-group" *ngFor="let gender of genders">
-                    <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}"  class="custom-control-input" formControlName="gender">
+                    <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}"
+                        class="custom-control-input" formControlName="gender">
                     <label for="{{gender.id}}">{{gender.value}}</label>
 
                 </div>
-      
-                <button btn btn-primary >Submit</button>
+                <div class="form-group" formArrayName="skills">
+                    <label>Skills</label>
+                    <ng-container *ngFor="let skills of (this.myReactiveForm.get('skills')).controls; index as i ">
+                        <input type="text" placeholder="add skills" formControlName="{{i}}" class="form-control">
+                        <button (click)="removeSkills(i)" style="margin-bottom: 20px;" class="btn btn-danger">Remove</button>
+
+
+                    </ng-container>
+                    <br>
+                    <button (click)="addClick()" style="margin-bottom: 20px;" class="btn btn-primary"><i>+</i>Add Skills</button>
+
+                </div>
+
+                <button btn btn-primary>Submit</button>
 
             </form>
-            <div class="col-md-6 rounded shadow py-4" *ngIf="submitted">
+            <div class="col-md-6 rounded shadow py-4" *ngIf="submitted && sub">
                 <h2>Form data</h2>
                 <p>Username: <strong>{{formData.name}}</strong></p>
+                <p>Email:<strong>{{formData.email}}</strong></p>
+                <p>Email:<strong>{{formData.course}}</strong></p>
+                <p>Email:<strong>{{formData.gender}}</strong></p>
+                <p>{{(this.myReactiveForm.get('skills')).value}}</p>
+
+
             </div>
 
 
         </div>
-        
 
 
-  </div>
+
+    </div>
 
 
 </div>

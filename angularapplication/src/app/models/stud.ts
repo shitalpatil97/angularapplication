@@ -9,4 +9,6 @@ export class Student1{
     city:string;
     pin:string;
     mobile:number;
+    state:string;
+    arr:any=[];
 }

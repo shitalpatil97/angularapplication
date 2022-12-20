@@ -71,7 +71,133 @@
   <button class="btn btn-danger" (click)="destroy()">Destroy component</button> -->
  <!-- <app-simpleform></app-simpleform>    -->
  <!-- <app-reactiveform></app-reactiveform> -->
- <app-reactstudform></app-reactstudform>  
+ 
+
+ <!-- <app-reactiveform></app-reactiveform> -->
+ <!-- <app-servicecomp2></app-servicecomp2>
+ <app-servicecomp1></app-servicecomp1> -->
+ <div>
+<h2 style="text-align: center;"><i>User Details</i></h2>
+  <table class="table table-striped" style="background-color: pink; color: red;">
+    <thead style="color: black;">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>street</th>
+        <th>city</th>
+        <th>LAT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let d of array">
+        <td>{{d[0].id}}</td>
+        <td>{{d[0].name}}</td>
+        <td>{{d[0].email}}</td>
+        <td>{{d[0].address.street}}</td>
+        <td>{{d[0].address.city}}</td>
+        <td>{{d[0].address.geo.lat}}</td>
+        
+
+      </tr>
+      <tr *ngFor ="let d of array">
+        <td>{{d[1].id}}</td>
+        <td>{{d[1].name}}</td>
+        <td>{{d[1].email}}</td>
+        <td>{{d[1].address.street}}</td>
+        <td>{{d[1].address.city}}</td>
+        <td>{{d[1].address.geo.lat}}</td>
+        
+
+      </tr>
+      <tr *ngFor ="let d of array">
+        <td>{{d[2].id}}</td>
+        <td>{{d[2].name}}</td>
+        <td>{{d[2].email}}</td>
+        <td>{{d[2].address.street}}</td>
+        <td>{{d[2].address.city}}</td>
+        <td>{{d[2].address.geo.lat}}</td>
+        
+
+      </tr>
+      <tr *ngFor ="let d of array">
+        <td>{{d[3].id}}</td>
+        <td>{{d[3].name}}</td>
+        <td>{{d[3].email}}</td>
+        <td>{{d[3].address.street}}</td>
+        <td>{{d[3].address.city}}</td>
+        <td>{{d[3].address.geo.lat}}</td>
+        
+
+      </tr>
+      <tr *ngFor ="let d of array">
+        <td>{{d[4].id}}</td>
+        <td>{{d[4].name}}</td>
+        <td>{{d[4].email}}</td>
+        <td>{{d[4].address.street}}</td>
+        <td>{{d[4].address.city}}</td>
+        <td>{{d[4].address.geo.lat}}</td>
+        
+
+      </tr>
+      <tr *ngFor ="let d of array">
+        <td>{{d[5].id}}</td>
+        <td>{{d[5].name}}</td>
+        <td>{{d[5].email}}</td>
+        <td>{{d[5].address.street}}</td>
+        <td>{{d[5].address.city}}</td>
+        <td>{{d[5].address.geo.lat}}</td>
+        
+
+      </tr>
+      <tr *ngFor ="let d of array">
+        <td>{{d[6].id}}</td>
+        <td>{{d[6].name}}</td>
+        <td>{{d[6].email}}</td>
+        <td>{{d[6].address.street}}</td>
+        <td>{{d[6].address.city}}</td>
+        <td>{{d[6].address.geo.lat}}</td>
+        
+
+      </tr>
+      <tr *ngFor ="let d of array">
+        <td>{{d[7].id}}</td>
+        <td>{{d[7].name}}</td>
+        <td>{{d[7].email}}</td>
+        <td>{{d[7].address.street}}</td>
+        <td>{{d[7].address.city}}</td>
+        <td>{{d[7].address.geo.lat}}</td>
+        
+
+      </tr>
+      <tr *ngFor ="let d of array">
+        <td>{{d[8].id}}</td>
+        <td>{{d[8].name}}</td>
+        <td>{{d[8].email}}</td>
+        <td>{{d[8].address.street}}</td>
+        <td>{{d[8].address.city}}</td>
+        <td>{{d[8].address.geo.lat}}</td>
+        
+
+      </tr>
+      <tr *ngFor ="let d of array">
+        <td>{{d[9].id}}</td>
+        <td>{{d[9].name}}</td>
+        <td>{{d[9].email}}</td>
+        <td>{{d[9].address.street}}</td>
+        <td>{{d[9].address.city}}</td>
+        <td>{{d[9].address.geo.lat}}</td>
+        
+
+      </tr>
+
+    </tbody>
+  </table>
+ </div>
+
+ <!-- <app-exp></app-exp> -->
+ <!-- <app-rform></app-rform> -->
+ <!-- <app-reactstudform></app-reactstudform>   -->
  <!-- <app-tempform></app-tempform> -->
  <!-- <app-formcontrolexp></app-formcontrolexp>  -->
   <!-- <app-formgroup></app-formgroup>  -->

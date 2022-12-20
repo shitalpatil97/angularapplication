@@ -1,29 +1,34 @@
-<div class="container">
-    <div class="row justify-content-centre" style="border-radius: 2px;">
-        <div class="col-md-6 text-left rounded shadow py-5">
+<div class="container" >
+    <div class="row justify-content-center" style="border-radius: 2px;">
+        <div class="col-md-3 text-left rounded shadow py-5" style="background-color:transparent;">
             <form form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
+                <legend>Employee Information</legend>
                 <div formGroupName="userDetails">
                     <div class="form-group">
                         <label for="">Enter Name</label>
                         <input type="text" formControlName="name" placeholder="Enter name" class="form-control">
-
-    
+                        <small class="text-danger" *ngIf="myReactiveForm.get('userDetails.name').invalid && myReactiveForm.get('userDetails.name').touched">Enter Valid Name</small>
                     </div>
                     <div class="form-group">
                         <label for="">Enter Email</label>
                         <input type="email" formControlName="email" placeholder="Enter email id" class="form-control">
-    
+                        <small class="text-danger" *ngIf="myReactiveForm.get('userDetails.email').invalid && myReactiveForm.get('userDetails.email').touched">Enter Valid Name</small>
+
+
                     </div>
                     <div class="form-group">
                         <label for="">Password </label>
-                        <input type="password" formControlName="email" placeholder="Enter password" class="form-control">
-    
+                        <input type="password" formControlName="password" placeholder="Enter password"
+                            class="form-control">
+                            <small class="text-danger" *ngIf="myReactiveForm.get('userDetails.password').invalid && myReactiveForm.get('userDetails.password').touched">Enter valid password minimum length should be of 8 digit</small>
+
+
                     </div>
                     <div class="form-group">
                         <label for="gender">Geneder </label> &nbsp;&nbsp;
-                        <input type="radio" value="male"  name="gender" formControlName="gender"> Male
-                        <input type="radio" value="female"  name="gender" formControlName="gender"> Female
-    
+                        <input type="radio" value="male" name="gender" formControlName="gender"> Male
+                        <input type="radio" value="female" name="gender" formControlName="gender"> Female
+
                     </div>
                 </div>
                 <div formGroupName="address">
@@ -39,7 +44,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">City</label>
-                        <select name=""  formControlName="city" class="form-control">
+                        <select name="" formControlName="city" class="form-control">
                             <option value="Sangola">Sangola</option>
                             <option value="Jath">Jath</option>
                             <option value="Sangli">Sangli</option>
@@ -67,18 +72,58 @@
                 <div class="form-group">
                     <label for="">Mobile No</label>
                     <input type="number" class="form-control" formControlName="mobile">
-                    <span class="text-danger" *ngIf="myReactiveForm.get('mobile').invalid && myReactiveForm.get('mobile').touched">mobile number required</span>
+                    <span class="text-danger"
+                        *ngIf="myReactiveForm.get('mobile').invalid && myReactiveForm.get('mobile').touched">mobile
+                        number required</span>
 
                 </div>
                 <button class="btn btn-primary">Submit</button>
-                
-                
+
+
 
             </form>
 
-        <!-- </div class="col-md-6 rounded shadow py-4" *ngIf="submitted">
-        <div > -->
-
+            
         </div>
+        <div class="col-md-9 rounded shadow py-5" *ngIf="submitted" style="background-color: transparent;">
+            <h2 style="text-align: center;">Employee Data</h2>
+            <table class="table" style="background-color: palegreen;">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Gender</th>
+                        <th>Address</th>
+                        <th>Landmark</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Mobile</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let a of array">
+                        <td>{{a.name}}</td>
+                        <td>{{a.email}}</td>
+                        <td>{{a.password}}</td>
+                        <td>{{a.gender}}</td>
+                        <td>{{a.add}}</td>
+                        <td>{{a.landmark}}</td>
+                        <td>{{a.city}}</td>
+                        <td>{{a.state}}</td>
+                        <td>{{a.mobile}}</td>
+
+
+
+
+
+
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </div>
 </div>

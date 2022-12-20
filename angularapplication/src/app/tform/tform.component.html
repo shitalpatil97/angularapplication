@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5" style=" background-color: paleturquoise">
+
+            <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+                <legend><i>Template Driven Form</i></legend>
+                <div class="form-group">
+                    <label for="name">First Name</label>
+                    <input type="text" placeholder="enter first name" #name="ngModel" required minlength="5" maxlength="5" ngModel name="name" class="form-control">
+                    <small class="text-danger" *ngIf="name.invalid && name.touched">Enter valid first name with minimum and maximum 5 character allowed</small>
+
+                </div>
+                <div class="form-group">
+                    <label for="name">Last Name</label>
+                    <input type="text" placeholder="enter last name" #lname="ngModel" required  maxlength="10" ngModel name="lname" class="form-control">
+                    <small class="text-danger" *ngIf="lname.invalid && lname.touched">Enter valid last name maximum 10 character allowed </small>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" placeholder="enter age" required ngModel name="age" class="form-control" #age="ngModel" min="17" max="20">
+                    <small class="text-danger" *ngIf="((age.value!=18 && age.value!=19 && age.value!=20))&& age.touched">InValid age</small>
+
+
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" email ngModel #email="ngModel" name="email">
+                    <small class="text-danger" *ngIf="email.invalid && email.touched">Enter valid email</small>
+
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="number" class="form-control" ngModel minlength="10" maxlength="10" name="phone" #phone="ngModel">
+                    <small *ngIf="phone.invalid && phone.touched">Enter valid number</small>
+
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <select name="city" id="" [ngModel]="defaultVal" class="form-control" >
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Delhi">Delhi</option>
+
+
+
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>&nbsp;&nbsp;
+                    <input type="radio" name="gender" value="male" ngModel class="custom-control-input" >Male
+                    <input type="radio" name="gender" value="female" ngModel class="custom-control-input" >Female
+
+
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="form-control" ngModel required minlength="8" #password="ngModel">
+                    <small class="text-danger" *ngIf="password.invalid && password.touched">Enter password</small>
+                    {{password.value}}
+
+
+                </div>
+                <div class="form-group">
+                    <label for="cPassword">Confirm Password</label>
+                    <input type="cPassword" name="cPassword" class="form-control" ngModel required minlength="8" #cPassword="ngModel">
+                    <small class="text-danger" *ngIf="cPassword.invalid && cPassword.touched">Enter Confirm Password</small>
+                    <small class="text-danger" *ngIf="password.value != cPassword.value">password mismatched Password</small>
+                    {{cPassword.value}}
+
+
+
+
+                </div>
+                <button class="btn btn-primary " style="margin-top: 15px;">Submit</button>
+
+            </form>
+
+        </div>
+        
+    </div>
+</div>

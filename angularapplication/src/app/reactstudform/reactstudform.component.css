@@ -1,0 +1,10 @@
+input,select.ng-invalid{
+    border-left: 5px solid red;
+}
+input.ng-valid{
+    border-left: 5px solid green;
+}
+.container{
+    background-image: url("blue-abstract-colorful-bright-color-260nw-1762586684.webp");
+    background-size: cover;
+}
