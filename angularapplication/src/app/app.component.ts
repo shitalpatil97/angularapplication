@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   }
   ngOnInit(): void {
     this._demoService.getUsersData().subscribe(data => {
-      console.log('getting data from api', data)
+      // console.log('getting data from api', data)
       this.array.push(data);
       // console.log(this.array);
       

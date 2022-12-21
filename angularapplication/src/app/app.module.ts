@@ -25,6 +25,11 @@ import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
 import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
 import { HttpClientModule} from '@angular/common/http';
 import { RectProjectComponent } from './rect-project/rect-project.component';
+import { DirDirective } from './dir.directive';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
 
 
 
@@ -50,7 +55,12 @@ import { RectProjectComponent } from './rect-project/rect-project.component';
     ExpComponent,
     Servicecomp1Component,
     Servicecomp2Component,
-    RectProjectComponent
+    RectProjectComponent,
+    DirDirective,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component
   ],
   imports: [
     BrowserModule,

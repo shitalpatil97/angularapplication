@@ -3,4 +3,8 @@ export class Employee{
     email:string;
     course:string;
     gender:string;
+    id:number;
+    name:string;
+    dept:string;
+    salary:number;
 }

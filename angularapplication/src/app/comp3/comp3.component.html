@@ -1,0 +1,15 @@
+<p>comp1 works!</p>
+<div class="box">
+    User Id: {{id.value}}<br>
+    User Name: {{uname.value}}<br>
+    User Salary: {{dept.value}}<br>
+    User dept: {{sal.value}}<br>
+
+    <input type="text" placeholder="Enter Id" #id><br>
+    <input type="text" placeholder="Enter Name" #uname><br>
+    <input type="text" placeholder="Enter Department" #dept><br>
+    <input type="text" placeholder="Enter Salary" #sal><br>
+
+
+    <button (click)="updateUser(id,uname,dept,sal)">Update</button>
+</div>

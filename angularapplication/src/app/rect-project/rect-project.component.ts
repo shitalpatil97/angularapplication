@@ -30,7 +30,7 @@ noNames(control:FormControl): Promise<any> | Observable<any> {
   const myResponse = new Promise<any>((resolve, reject) => {
     setTimeout(() => {
       if(control.value === 'Test'){
-        resolve({'emailNotAllowed': true})
+        resolve({'namesNotAllowed': true})
       } else {
         resolve(null)
       }
